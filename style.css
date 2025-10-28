@@ -1,0 +1,99 @@
+/* 🌌 Tło strony */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0b0b0f; /* głęboka czerń z nutą granatu */
+  font-family: 'Playfair Display', serif;
+  color: #f5f5f5;
+}
+
+/* ✨ Brokatowe tło (canvas) */
+#glitterCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* 💎 Diamentowe menu po prawej stronie */
+.diamond-menu {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: linear-gradient(to bottom, #0b0b0f, #1a1a1f);
+  padding: 20px 10px;
+  box-shadow: -4px 0 20px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.diamond-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diamond-menu li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #e0e0e0;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #2a2a2f, #1a1a1f);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.diamond-menu li a:hover {
+  color: #fff;
+  border-color: #fff;
+  background: linear-gradient(145deg, #444, #222);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.diamond-menu li a::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #fff 0%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* 🏷️ Nagłówek */
+.lux-header {
+  text-align: center;
+  margin-top: 100px;
+  padding: 40px 20px;
+  font-size: 28px;
+  background: linear-gradient(to right, #1a1a1f, #2a2a2f);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+/* 🌟 Iskierki SVG */
+.sparkle {
+  animation: shimmer 1.8s ease-out forwards;
+  filter: drop-shadow(0 0 20px white) brightness(1.8);
+}
+
+/* ✨ Animacja błysku */
+@keyframes shimmer {
+  0%   { opacity: 0; transform: scale(0.5); }
+  30%  { opacity: 1; transform: scale(1.8); }
+  70%  { opacity: 0.8; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
