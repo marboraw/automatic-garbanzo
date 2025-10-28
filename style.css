@@ -30,13 +30,14 @@ body {
 }
 
 .diamond-menu ul {
-  list-style: none;
+  list-style: none; /* 🔥 usuwa kropki */
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 
 .diamond-menu li a {
   text-decoration: none;
@@ -76,7 +77,7 @@ body {
   text-align: center;
   margin-top: 100px;
   padding: 40px 20px;
-  font-size: 28px;
+  font-size: 14px;
   background: linear-gradient(to right, #1a1a1f, #2a2a2f);
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
